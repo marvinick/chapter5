@@ -1,6 +1,4 @@
 angular.module('App', ['ionic'])
-
-angular.module('App', ['ionic'])
 	.config(function ($stateProvider, $urlRouterProvider) {
 		$stateProvider
 			.state('tabs', {
