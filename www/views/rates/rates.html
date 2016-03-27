@@ -6,7 +6,7 @@
 				<span class="price" ng-if="currency.ticker.last == currency.ticker['24h_avg']">
 					{{currency.ticker.last || '0.00'}}<br />0.00
 				</span>
-				<span class="price negative" ng-if="currency.ticker.last < currency.ticker['24h-avg']">
+				<span class="price negative" ng-if="currency.ticker.last < currency.ticker['24h_avg']">
 					{{ currency.ticker.last}}<br /><span class="icon ion-arrow-down-b"></span> {{ currency.ticker['24h_avg'] - currency.ticker.last | number: 2 }}
 				</span>
 				<span class="price positive" ng-if="currency.ticker.last > currency.ticker['24h_avg']">

@@ -13,4 +13,4 @@ angular.module('App')
 			});
 	};
 	$scope.load();
-})
+});
