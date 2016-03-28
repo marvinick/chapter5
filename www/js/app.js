@@ -21,6 +21,7 @@ angular.module('App', ['ionic'])
 			{ code: 'USD', text: 'United States Dollar', selected: true },
 			{ code: 'ZAR', text: 'South African Rand', selected: false },
 			{ code: 'RUP', text: 'India Rupee', selected: false },
+			{ code: "BHT", text: "Thailand Baht", selected: false }
 		];
 	})
 
