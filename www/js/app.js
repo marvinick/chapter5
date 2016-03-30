@@ -31,6 +31,16 @@ angular.module('App', ['ionic'])
 					templateUrl: "views/currencies/currencies.html"
 				}
 			}
+		})
+
+		.state('tabs.detail', {
+			url: '/detail/:currency',
+			views: {
+				'rates-tab': {
+					templateUrl: 'views/detail/detail.html',
+					controller: 'DetailController'
+				}
+			}
 		});
 	$urlRouterProvider.otherwise('/tabs/rates');
 })
@@ -38,9 +48,9 @@ angular.module('App', ['ionic'])
 .factory('Currencies', function() {
 	return [
 		{ code: 'AUD', text: 'Australian Dollar', selected: true },
-		{ code: 'BRL', text: 'Brazilian Real', selected: false },
+		{ code: 'BRL', text: 'Brazilian Real', selected: true },
 		{ code: 'CAD', text: 'Canadian Dollar', selected: true },
-		{ code: 'CHF', text: 'Swiss Franc', selected: false },
+		{ code: 'CHF', text: 'Swiss Franc', selected: true },
 		{ code: 'CNY', text: 'Chinese Yuan', selected: true },
 		{ code: 'EUR', text: 'Euro', selected: true },
 		{ code: 'GBP', text: 'British Pound Sterling', selected: true },
@@ -60,9 +70,6 @@ angular.module('App', ['ionic'])
 	];
 })
 
-
-
-	
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
