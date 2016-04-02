@@ -10,6 +10,8 @@ angular.module('App')
 					currency.ticker = tickers[currency.code];
 					currency.ticker.timestamp = new Date(currency.ticker.timestamp);
 				});
+			}).finally(function() {
+				$scope.$broadcast('scroll.refreshComplete');
 			});
 	};
 	$scope.load();
