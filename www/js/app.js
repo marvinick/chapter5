@@ -17,10 +17,11 @@ angular.module('App', ['ionic', 'highcharts-ng'])
 			}
 		})
 		.state('tabs.history', {
-			url: '/history',
+			url: '/history?currency',
 			views: {
 				'history-tab': {
-					templateUrl: 'views/history/history.html'
+					templateUrl: 'views/history/history.html',
+					controller: "HistoryController"
 				}
 			}
 		})
